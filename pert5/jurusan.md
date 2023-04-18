@@ -1,11 +1,14 @@
 ```mermaid
     flowchart TD;
-    A(start) --> B[/input kode jurusan/];
-    B --> C{case 'A' II 'a'};
-    C --true--> D[print Teknik Informatika];
-    C --false--> E{case 'B' II 'b'};
-    E --true--> F[print Sistem Informasi];
-    E --false--> G((default));
-    D & F & G --> H(finish);
+    A(start) --> B[char cKode];
+    B --> C[print Input Kode Jurusan];
+    C --> D[print  Kode Input Diterima];
+    D --> E{case 'A' II 'a'};
+    E --true--> F[print Teknik Informatika];
+    E --false--> G{case 'B' II 'b'};
+    G --true--> H[print Sistem Informasi];
+    G --false--> I((default));
+    I --> J[print Anda Salah Memasukkan Kode];
+    F & H & J --> K(finish);
    
 ```
